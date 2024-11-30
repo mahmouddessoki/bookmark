@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="./imgs/bookmark.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/index_style.css">
+    <title>Bookmark</title>
+</head>
+
+<body>
+
+
+    <section id="bookmark" class="bookmark py-5">
+        <div class="container">
+
+            <div class="bookmark-header text-center">
+                <h1 class="bookmark-title mx-auto mt-3">Bookmarker</h1>
+            </div>
+            <div class="bookmark-form p-5 rounded-5 shadow">
+                <h2 class="bookmark-form-title mx-auto mb-4 text-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favorite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <form action="" id="bookmark-form">
+                    <div class="position-relative">
+
+                        <label for="site-name">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                            Site Name
+                        </label>
+                        <input id="site-name" type="text" class="form-control mb-4 mt-2 fs-5" id="site-name"
+                            placeholder="Bookmark Name">
+                        <i class="fa-solid fa-check fa-lg text-success"></i>
+                        <i class="fa-solid fa-circle-exclamation fa-lg text-danger"></i>
+
+                    </div>
+
+                    <div class="position-relative">
+
+                        <label for="site-url">
+                            <i class="fa-solid fa-link"></i>
+                            Site URL
+                        </label>
+                        <input id="site-url" type="url" class="form-control mb-4 mt-2 fs-5 " id="site-url"
+                            placeholder="Website URL">
+
+                        <i class="fa-solid fa-check fa-lg text-success"></i>
+                        <i class="fa-solid fa-circle-exclamation fa-lg text-danger"></i>
+                    </div>
+
+
+                    <button type="button" id="add-btn" onclick="addBookmark()"
+                        class="btn overflow-hidden btn-dark px-5 py-2 d-block mx-auto text-capitalize">
+                        <span>Add</span>
+                    </button>
+                    <button type="button" id="edit-btn" onclick="editBookmark()"
+                        class="btn overflow-hidden btn-secondary px-5 py-2 d-none mx-auto text-capitalize">
+                        <span>edit</span>
+                    </button>
+
+
+                </form>
+            </div>
+            <div class="bookmark-search my-4">
+                <form action="" class="seach-form">
+                    <input oninput="search()" type="search" placeholder="search...." id="search-input"
+                        class="form-control fs-5 shadow">
+                </form>
+            </div>
+            <div class="bookmark-table table-responsive text-center  rounded-3">
+
+                <table class="table shadow">
+                    <thead class="text-capitalize">
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                        <th>edit</th>
+                    </thead>
+                    <tbody id="bookmark-list">
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
