@@ -373,7 +373,7 @@ function generateId() {
     if (randomID == lastRandomId) {
         generateId()
     }
-
+    lastRandomId = randomId
     return randomID;
 
 }
