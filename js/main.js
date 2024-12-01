@@ -304,9 +304,29 @@ function validateInputs() {
 
                     <p/>
 
-                    <ul class="fa-ul text-start">
-                    <li><span class="fa-li"><i class="fa-solid fa-check-square"></i></span>Site name must contain at least 3 characters</li>
-                    <li><span class="fa-li"><i class="fa-solid fa-check-square"></i></span>Site URL must be a valid one</li>
+                    <ul class=" text-start list-unstyled">
+                    <li class="d-flex column-gap-2 align-items-start mb-2"><i class="fa-solid text-danger align-self-center fa-check-square"></i>Site name must contain at least 3 characters</li>
+                    <li class="d-flex column-gap-2 align-items-start"><i class="fa-solid text-danger fa-check-square"></i>Site URL must be a valid one , it must follows the following rules</li>
+                      <ul class="list-unstyled px-3 mt-2">
+                        <li> <i class="fa-solid text-danger fa-asterisk"></i> Start with <strong>http://</strong> or <strong>https://</strong>.</li>
+                        <li class="my-2"> <i class="fa-solid text-danger fa-asterisk"></i> Include a valid domain name (e.g., <strong>example</strong>).</li>
+                        <li> <i class="fa-solid text-danger fa-asterisk"></i> Use a valid TLD (e.g., <strong>.com</strong>, <strong>.org</strong>).</li>
+                        
+
+                        
+
+                    </ul>
+
+                    <p class="mt-2 mb-0">
+                    E.g. https://www.example.com 
+                    Or http://example.com <br>
+                    </p>
+                
+                    
+
+                        
+                           
+                    
                     </ul>
                     
                     </div>
@@ -373,7 +393,7 @@ function generateId() {
     if (randomID == lastRandomId) {
         generateId()
     }
-    lastRandomId = randomId
+    lastRandomId = randomID
     return randomID;
 
 }
